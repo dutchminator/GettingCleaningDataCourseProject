@@ -65,8 +65,8 @@ names(filteredData) <- gsub("\\(\\)","", names(filteredData))
 ### 5. From the set at step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject
 
 aggrData <- filteredData %>%                          # Start with the filteredData df
-  select(-activity, -activity_text) %>%               # Drop the activity columns, not numeric
-  group_by(subject) %>%                               # Group by subject
+  select(-activity) %>%                               # Drop the numeric activity column
+  group_by(subject, activity_text) %>%                # Group by subject and activity_text
   summarise_each(funs(mean))                          # Use summarise_each to apply mean to each column
 
 write.table(aggrData, "aggrData.txt", row.names=FALSE)
