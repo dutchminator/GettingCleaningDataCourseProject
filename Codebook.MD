@@ -24,9 +24,13 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 gravityMean tBodyAccMean tBodyAccJerkMean tBodyGyroMean tBodyGyroJerkMean
 
 The data is grouped by subject ID and type of activity, and variables are the calculated average of all ungrouped measures.
-The following mean and standard deviation variables are included: 
+Group-by variables:
+
 "subject"                   
-"activity_text"             
+"activity_text"    
+
+The following mean and standard deviation variables are included: 
+         
 "tBodyAcc-mean-X"           
 "tBodyAcc-mean-Y"           
 "tBodyAcc-mean-Z"          
