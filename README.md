@@ -1,5 +1,5 @@
 # GettingCleaningDataCourseProject
-Public repo for the Getting and Cleaning Data course project on Coursera. This repository contains two deliverables:
+Public repo for the Getting and Cleaning Data course project on Coursera. This repository contains three deliverables:
 
 ## run_analysis.R
 Code file containing the (commented) download link for the raw data, and all code required for the data preparation steps. In-line comments describe the steps taken to produce the result. They follow roughly the following steps:
