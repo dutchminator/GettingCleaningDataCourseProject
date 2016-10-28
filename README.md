@@ -19,6 +19,8 @@ Code file containing the (commented) download link for the raw data, and all cod
 ## aggrData.txt
 Resulting output file, containing the averages of all mean and standard deviation measures in the original dataset, grouped by subject and activity. The columns are the subject identifier column, and all mean and std columns from the original dataset.
 
+One could argue that abbreviations like "t" or "f" are to be written in full as part of tidy data, but if I were to work with the data, I'd prefer them shortened. The Codebook explains what the t or f stand for anyway.
+
 ## Codebook.MD
 Describes the dataset, and lists the variables used to group by, and containing the actual measures.
 
