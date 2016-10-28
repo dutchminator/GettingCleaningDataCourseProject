@@ -4,20 +4,26 @@
 
 ### Preparation
 
-#setwd("~/datasciencecoursera/Data Cleaning/Week 4/UCI HAR Dataset")
+setwd("~/datasciencecoursera/Data Cleaning/Week 4")
 library(dplyr)
 
 ### 0. Properly read the various source files
-X_train <- tbl_df(read.table("train/X_train.txt", quote="\"", comment.char=""))
-y_train <- tbl_df(read.table("train/y_train.txt", quote="\"", comment.char=""))
-subject_train <- tbl_df(read.table("train/subject_train.txt", quote="\"", comment.char=""))
 
-X_test <- tbl_df(read.table("test/X_test.txt", quote="\"", comment.char=""))
-y_test <- tbl_df(read.table("test/y_test.txt", quote="\"", comment.char=""))
-subject_test <- tbl_df(read.table("test/subject_test.txt", quote="\"", comment.char=""))
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(url, destfile = "Dataset.zip")
+unzip("Dataset.zip")
 
-features <- tbl_df(read.table("features.txt", quote="\"", comment.char=""))
-activities <- tbl_df(read.table("activity_labels.txt", quote="\"", comment.char=""))
+
+X_train <- tbl_df(read.table("UCI HAR Dataset/train/X_train.txt", quote="\"", comment.char=""))
+y_train <- tbl_df(read.table("UCI HAR Dataset/train/y_train.txt", quote="\"", comment.char=""))
+subject_train <- tbl_df(read.table("UCI HAR Dataset/train/subject_train.txt", quote="\"", comment.char=""))
+
+X_test <- tbl_df(read.table("UCI HAR Dataset/test/X_test.txt", quote="\"", comment.char=""))
+y_test <- tbl_df(read.table("UCI HAR Dataset/test/y_test.txt", quote="\"", comment.char=""))
+subject_test <- tbl_df(read.table("UCI HAR Dataset/test/subject_test.txt", quote="\"", comment.char=""))
+
+features <- tbl_df(read.table("UCI HAR Dataset/features.txt", quote="\"", comment.char=""))
+activities <- tbl_df(read.table("UCI HAR Dataset/activity_labels.txt", quote="\"", comment.char=""))
 
 # Rename columns train data
 
